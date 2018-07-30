@@ -15,6 +15,7 @@
         </router-link>
       </ul>
     </div>
+    <p @click="info">测试数据</p>
     <div class="main">
       <router-view/>
     </div> 
@@ -27,7 +28,23 @@ export default {
   components: {
     CustomHeader
   },
-  name: 'App'
+  name: 'App',
+  data(){
+    return {
+        
+    }
+  },
+  computed:{
+    
+  },
+  methods:{
+    info(){
+        console.log(this.http.getList)
+        this.http.getList().then(function(res){
+          console.log(res)
+        })
+    }
+  }
 }
 </script>
 <style src= './assets/css/reset.css'></style>
