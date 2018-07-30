@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 let getData = axios.create({
-    baseURL : "http://localhost:5000/api",
+    baseURL : baseUrl,
     timeout : 6000
 })
 
